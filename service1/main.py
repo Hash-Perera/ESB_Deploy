@@ -56,6 +56,10 @@ def healthCheck():
     print('🟢 Sample server is running!')
     return {"status": "Hello! Sample server is running!"}
 
+@app.get("/commit")
+def commitCheck():
+    return {"status": "Hello! After commit!"}
+
 @app.get("/records")
 async def get_records():
     print('🟢 Fetching records from MongoDB')
