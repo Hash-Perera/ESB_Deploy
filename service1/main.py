@@ -60,6 +60,10 @@ def healthCheck():
 def commitCheck():
     return {"status": "Hello! After commit!"}
 
+@app.get("/commit2")
+def commitCheck():
+    return {"status": "Hello! After commit2!"}
+
 @app.get("/records")
 async def get_records():
     print('🟢 Fetching records from MongoDB')
