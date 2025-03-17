@@ -30,6 +30,8 @@ jobs:
           aws configure set region $AWS_REGION
 
       - name: Initialize and Deploy to Elastic Beanstalk
+        env:
+          AWS_REGION: "us-east-1"
         run: |
           cd service1
           eb init -p python-3.11 service1 --region $AWS_REGION
